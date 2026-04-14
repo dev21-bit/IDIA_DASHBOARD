@@ -767,10 +767,10 @@ class DataManager:
     def get_operadores_data():
         try:
             connection = pymysql.connect(
-                host='sql3.freesqldatabase.com',
-                user='sql3817481',
-                password='398j6uKWle',
-                database='sql3817481',
+               host='sql5.freesqldatabase.com',
+                user='sql5823189',
+                password='GTdwIZk7Y2',
+                database='sql5823189',
                 port=3306,
                 connect_timeout=10
             )
