@@ -558,10 +558,10 @@ class DataManager:
     def get_ine_data_raw():
         try:
             connection = pymysql.connect(
-                host='sql3.freesqldatabase.com',
-                user='sql3817481',
-                password='398j6uKWle',
-                database='sql3817481',
+                host='sql5.freesqldatabase.com',
+                user='sql5823189',
+                password='GTdwIZk7Y2',
+                database='sql5823189',
                 port=3306,
                 connect_timeout=10
             )
@@ -586,10 +586,10 @@ class DataManager:
     def get_ine_data_agrupado():
         try:
             connection = pymysql.connect(
-                host='sql3.freesqldatabase.com',
-                user='sql3817481',
-                password='398j6uKWle',
-                database='sql3817481',
+                host='sql5.freesqldatabase.com',
+                user='sql5823189',
+                password='GTdwIZk7Y2',
+                database='sql5823189',
                 port=3306,
                 connect_timeout=10
             )
@@ -719,10 +719,10 @@ class DataManager:
     def get_simpatizantes_colonia():
         try:
             connection = pymysql.connect(
-                host='sql3.freesqldatabase.com',
-                user='sql3817481',
-                password='398j6uKWle',
-                database='sql3817481',
+                host='sql5.freesqldatabase.com',
+                user='sql5823189',
+                password='GTdwIZk7Y2',
+                database='sql5823189',
                 port=3306,
                 connect_timeout=10
             )
