@@ -1143,6 +1143,10 @@ class AdvancedAnalytics:
 # ---------------------------------------------------
 # VISOR DE MAPA PROFESIONAL
 # ---------------------------------------------------
+CARTO_API_KEY = "cb1_41qb_1_06f6d38738ee62c227fb556c"
+CARTO_TILES = f"https://basemaps.cartocdn.com/rastertiles/voyager/{{z}}/{{x}}/{{y}}.png?key={CARTO_API_KEY}"
+CARTO_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+
 class ProfessionalMapViewer:
     @staticmethod
     def create_map(features, colonias, db_raw, db_agrupado, filtro, datos_seccion_con_colores, simpatizantes_colonia):
@@ -1151,7 +1155,7 @@ class ProfessionalMapViewer:
         
         if db_agrupado.empty:
             st.warning("No hay datos de simpatizantes para mostrar")
-            m = folium.Map(location=centro, zoom_start=zoom, tiles='CartoDB positron', control_scale=True)
+            m = folium.Map(location=centro, zoom_start=zoom, tiles=CARTO_TILES, attr=CARTO_ATTR, control_scale=True)
             return m
         
         simpatizantes_por_seccion = db_agrupado.groupby('seccion')['simpatizantes'].sum().reset_index()
@@ -1165,7 +1169,8 @@ class ProfessionalMapViewer:
         m = folium.Map(
             location=centro,
             zoom_start=zoom,
-            tiles='CartoDB positron',
+            tiles=CARTO_TILES,
+            attr=CARTO_ATTR,
             control_scale=True
         )
         
